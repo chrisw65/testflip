@@ -14,6 +14,9 @@ public/            # Static entry point (HTML/CSS/JS, including sample.pdf for d
 
 1. Serve the `public/` directory with any static file server. Examples:
    ```bash
+   # Using npm scripts
+   npm start
+
    # Using Python
    python -m http.server --directory public 4173
 
