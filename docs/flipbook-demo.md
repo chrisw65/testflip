@@ -6,19 +6,13 @@ It combines **Three.js** for the WebGL scene, a custom shader for the curling an
 ## Project structure
 
 ```
-assets/            # Source copy of the sample PDF used by the demo viewer
+docs/              # Additional documentation
 public/            # Static entry point (HTML/CSS/JS, including sample.pdf for default testing)
 ```
 
 ## Running the demo locally
 
-1. Install dependencies required for generating the sample PDF (optional – already committed):
-   ```bash
-   pip install reportlab
-   ```
-   > The sample `assets/sample.pdf` is already included. The instruction above is only needed if you want to regenerate it.
-
-2. Serve the `public/` directory with any static file server. Examples:
+1. Serve the `public/` directory with any static file server. Examples:
    ```bash
    # Using Python
    python -m http.server --directory public 4173
@@ -30,10 +24,10 @@ public/            # Static entry point (HTML/CSS/JS, including sample.pdf for d
    node serve.mjs 4173
    ```
 
-3. Open the browser at `http://localhost:4173/` (adjust the port if you changed it). When using
+2. Open the browser at `http://localhost:4173/` (adjust the port if you changed it). When using
    `serve.mjs` you can also set a port via `PORT=5000 node serve.mjs`.
 
-4. The viewer automatically loads the bundled sample document on start. When it finishes you will
+3. The viewer automatically loads the bundled sample document on start. When it finishes you will
    see a status message showing how many pages were detected. To try another PDF, paste its URL in
    the field and press **Load PDF** — the path is resolved relative to the current page, so both
    absolute URLs and local paths work. Pages are rendered at ~2.2× device pixel ratio for crisp
