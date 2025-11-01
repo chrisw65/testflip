@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipbook WebGL Proof of Concept</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.2.67/build/pdf.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>WebGL PDF Flipbook</h1>
+        <p>
+          Proof of concept demonstrating a Three.js driven, shader-based page curl
+          for PDF pages rendered via PDF.js. Drag from the page corners to flip
+          forward or backward.
+        </p>
+        <div class="controls">
+            <label>
+              PDF URL
+              <input type="text" id="pdfSource" value="./sample.pdf" />
+          </label>
+          <button id="loadPdf">Load PDF</button>
+        </div>
+      </section>
+      <section class="viewer">
+        <div id="flipbook" class="flipbook"></div>
+        <div class="hint">
+          Click and drag from the right edge to move forward, or from the left edge to go back.
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
